@@ -27,7 +27,7 @@ public class main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
         Pane root = FXMLLoader.load(getClass().getResource("/gui/Layout.fxml"));
-        Scene scene = new Scene(root, 800, 600);
+        Scene scene = new Scene(root, 600, 400);
         primaryStage.setTitle("Compilador");
         primaryStage.setScene(scene);
         primaryStage.show();
