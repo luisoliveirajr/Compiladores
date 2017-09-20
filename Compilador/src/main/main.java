@@ -29,6 +29,7 @@ public class main extends Application {
         Pane root = FXMLLoader.load(getClass().getResource("/gui/Layout.fxml"));
         Scene scene = new Scene(root, 600, 400);
         primaryStage.setTitle("Compilador");
+        primaryStage.setResizable(false);
         primaryStage.setScene(scene);
         primaryStage.show();
     }  
