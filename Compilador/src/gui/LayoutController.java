@@ -14,7 +14,7 @@ import javafx.fxml.Initializable;
  *
  * @author luis.oliveira
  */
-public class Frm1Controller implements Initializable {
+public class LayoutController implements Initializable {
 
     /**
      * Initializes the controller class.
