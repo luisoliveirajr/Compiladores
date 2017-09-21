@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.111" fx:controller="Controller.LayoutController">
+    <children>
+        <Pane layoutY="-6.0" prefHeight="400.0" prefWidth="600.0">
+            <children>
+                <Pane layoutX="27.0" layoutY="26.0" prefHeight="82.0" prefWidth="556.0">
+                    <children>
+                        <ImageView fitHeight="82.0" fitWidth="104.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@logo.png" />
+                            </image>
+                        </ImageView>
+                        <Label layoutX="117.0" layoutY="6.0" style="-fx-font-weight: bold;" text="UNIVERSIDADE FEDERAL DO TOCANTINS" />
+                        <Label layoutX="117.0" layoutY="23.0" style="-fx-font-weight: bold;" text="DISCIPLINA: COMPILADORES" textFill="#0b9a95" />
+                        <Label layoutX="117.0" layoutY="41.0" style="-fx-font-weight: bold;" text="PROFESSOR: ALEXANDRE ROSSINI" textFill="#0b9a95" />
+                        <Label layoutX="117.0" layoutY="60.0" style="-fx-font-weight: bold;" text="ALUNO: LUÍS FERREIRA DE OLIVEIRA JÚNIOR" textFill="#2a16da" />
+                    </children>
+                </Pane>
+                <Pane layoutX="27.0" layoutY="118.0" prefHeight="82.0" prefWidth="556.0" style="-fx-border-color: #00BFFF;">
+                    <children>
+                        <TextField layoutX="60.0" layoutY="14.0" prefHeight="25.0" prefWidth="387.0" />
+                        <Label layoutX="17.0" layoutY="18.0" style="-fx-font-weight: bold;" text="Infixa:" />
+                        <TextField layoutX="60.0" layoutY="46.0" prefHeight="25.0" prefWidth="387.0" />
+                        <Button layoutX="453.0" layoutY="13.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="91.0" style="-fx-font-weight: bold;" text="Converter" textFill="#1541d0" onAction="#converte" />
+                        <Label layoutX="9.0" layoutY="50.0" style="-fx-font-weight: bold;" text="Posfixa:" />
+                    </children>
+                </Pane>
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>

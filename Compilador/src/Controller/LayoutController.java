@@ -3,10 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package gui;
+package Controller;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 
 /**
@@ -23,5 +24,9 @@ public class LayoutController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
-    
+    @FXML
+    private void converte() {
+        
+        System.out.println(" Convertendo para POSFIXA.");
+    }
 }

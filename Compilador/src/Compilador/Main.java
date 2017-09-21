@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package main;
+package Compilador;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -15,7 +15,7 @@ import javafx.stage.Stage;
  *
  * @author luis.oliveira
  */
-public class main extends Application {
+public class Main extends Application {
     
     /**
      * @param args the command line arguments
@@ -26,7 +26,7 @@ public class main extends Application {
     
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Pane root = FXMLLoader.load(getClass().getResource("/gui/Layout.fxml"));
+        Pane root = FXMLLoader.load(getClass().getResource("/View/Layout.fxml"));
         Scene scene = new Scene(root, 600, 400);
         primaryStage.setTitle("Compilador");
         primaryStage.setResizable(false);
