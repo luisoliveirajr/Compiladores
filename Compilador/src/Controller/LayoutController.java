@@ -9,6 +9,8 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 
 /**
  * FXML Controller class
@@ -26,7 +28,10 @@ public class LayoutController implements Initializable {
     }    
     @FXML
     private void converte() {
-        
-        System.out.println(" Convertendo para POSFIXA.");
+      Alert alerta = new Alert(AlertType.ERROR);
+      alerta.setTitle("Compilador está iniciado com sucesso!");
+      alerta.setHeaderText(null);
+      alerta.setContentText("O Brasil é nosso!");
+      alerta.showAndWait();
     }
 }
