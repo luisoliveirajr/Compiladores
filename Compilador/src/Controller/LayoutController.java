@@ -5,6 +5,7 @@
  */
 package Controller;
 
+import Model.Operations;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
@@ -34,7 +35,8 @@ public class LayoutController implements Initializable {
     }    
     @FXML
     private void converte() {
-      txtPosfixa.setText(txtInfixa.getText());
+      Operations Op = new Operations();
+      txtPosfixa.setText( Op.Posfixa(txtInfixa.getText()));
       /*Alert alerta = new Alert(AlertType.ERROR);
       alerta.setTitle("Compilador está iniciado com sucesso!");
       alerta.setHeaderText(null);
