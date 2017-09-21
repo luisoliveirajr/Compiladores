@@ -11,6 +11,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
+import javafx.scene.control.TextField;
 
 /**
  * FXML Controller class
@@ -22,16 +23,22 @@ public class LayoutController implements Initializable {
     /**
      * Initializes the controller class.
      */
+    @FXML
+    private TextField txtInfixa;
+    
+    @FXML
+    private TextField txtPosfixa;
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
     @FXML
     private void converte() {
-      Alert alerta = new Alert(AlertType.ERROR);
+      txtPosfixa.setText(txtInfixa.getText());
+      /*Alert alerta = new Alert(AlertType.ERROR);
       alerta.setTitle("Compilador está iniciado com sucesso!");
       alerta.setHeaderText(null);
       alerta.setContentText("O Brasil é nosso!");
-      alerta.showAndWait();
+      alerta.showAndWait();*/
     }
 }
