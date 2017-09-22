@@ -99,6 +99,9 @@ public class Operations {
                 else if(i > 0 && a.charAt(i) == '(' && a.charAt(i-1) == ')'){
                     b+='.';
                 }
+                else if(i > 0 && a.charAt(i) == '(' && a.charAt(i-1) != '*' && a.charAt(i-1) != '+'  && a.charAt(i-1) != '.' && a.charAt(i-1) != '('  ){
+                    b+='.';
+                }
                 if(i > 0 && a.charAt(i-1) == '*'){
                     b+='.';
                     b += a.charAt(i);
