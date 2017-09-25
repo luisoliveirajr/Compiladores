@@ -98,14 +98,17 @@ public class Operations {
                 }
                 else if(i > 0 && a.charAt(i) == '(' && a.charAt(i-1) == ')'){
                     b+='.';
+                    b += a.charAt(i);
+                    
                 }
-                else if(i > 0 && a.charAt(i) == '(' && a.charAt(i-1) != '*' && a.charAt(i-1) != '+'  && a.charAt(i-1) != '.' && a.charAt(i-1) != '('  ){
-                    b+='.';
-                }
-                if(i > 0 && a.charAt(i-1) == '*'){
+                else if(i > 0 && a.charAt(i-1) == '*'){
                     b+='.';
                     b += a.charAt(i);
                 }
+                else if(i > 0 && a.charAt(i-1) != '+' && a.charAt(i-1) != '.' && a.charAt(i-1) != ' ' && a.charAt(i-1) != '*' && a.charAt(i-1) != '(' && a.charAt(i-1) != ')' && a.charAt(i) != '+' && a.charAt(i) != '.' && a.charAt(i) != '*' && a.charAt(i) != ')' && a.charAt(i) != '('){
+                    b+='.';
+                    b += a.charAt(i);
+                } 
                 else{
                     b += a.charAt(i);
                 }
