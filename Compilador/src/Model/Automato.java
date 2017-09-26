@@ -16,8 +16,8 @@ public class Automato {
     private String Alfabeto;
     private String Simbolos;
     private Integer EstadoInicial;
-    private List <Integer> EstadosFinais = new ArrayList<Integer>();
-    private List <Transicao> MatrizdeTransicao = new ArrayList<Transicao>();
+    private ArrayList <Integer> EstadosFinais = new ArrayList<>();
+    private final ArrayList <Transicao> MatrizdeTransicao = new ArrayList<>();
 
     public String getAlfabeto() {
         return Alfabeto;
@@ -47,7 +47,7 @@ public class Automato {
         return EstadosFinais;
     }
 
-    public void setEstadosFinais(List <Integer> EstadosFinais) {
+    public void setEstadosFinais(ArrayList <Integer> EstadosFinais) {
         this.EstadosFinais = EstadosFinais;
     }
 
@@ -55,7 +55,7 @@ public class Automato {
         return MatrizdeTransicao;
     }
 
-    public void setMatrizdeTransicao(List <Transicao> MatrizdeTransicao) {
-            this.MatrizdeTransicao = MatrizdeTransicao;
+    public void setMatrizdeTransicao(Transicao MatrizdeTransicao) {
+            this.MatrizdeTransicao.add(MatrizdeTransicao);
     }    
 }

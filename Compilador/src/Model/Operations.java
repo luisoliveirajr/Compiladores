@@ -5,6 +5,7 @@
  */
 package Model;
 
+import java.util.ArrayList;
 import java.util.Stack;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
@@ -187,5 +188,21 @@ public class Operations {
             default:
                 return 0; // Menor precendencia
         }
+    }
+    
+    private Automato base(String s){
+        Automato a = new Automato();
+        ArrayList <Integer> EstadosFinais = new ArrayList<>();
+        Transicao T = new Transicao();
+        
+        a.setAlfabeto(s);
+        a.setConjunto_de_Simbolos(s);
+        a.setEstadoInicial(0);
+        EstadosFinais.add(1);
+        a.setEstadosFinais(EstadosFinais);
+        T.transicao.add(1);
+        a.setMatrizdeTransicao(T);
+        
+        return a; 
     }
 }
