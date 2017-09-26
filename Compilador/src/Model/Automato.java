@@ -14,7 +14,7 @@ import java.util.List;
  */
 public class Automato {
     private String Alfabeto;
-    private String Conjunto_de_Simbolos;
+    private String Simbolos;
     private Integer EstadoInicial;
     private List <Integer> EstadosFinais = new ArrayList<Integer>();
     private List <Transicao> MatrizdeTransicao = new ArrayList<Transicao>();
@@ -27,12 +27,12 @@ public class Automato {
         this.Alfabeto = Alfabeto;
     }
 
-    public String getConjunto_de_Simbolos() {
-        return Conjunto_de_Simbolos;
+    public String getSimbolos() {
+        return Simbolos;
     }
 
-    public void setConjunto_de_Simbolos(String Conjunto_de_Simbolos) {
-        this.Conjunto_de_Simbolos = Conjunto_de_Simbolos;
+    public void setConjunto_de_Simbolos(String Simbolos) {
+        this.Simbolos = Simbolos;
     }
 
     public Integer getEstadoInicial() {
@@ -56,6 +56,6 @@ public class Automato {
     }
 
     public void setMatrizdeTransicao(List <Transicao> MatrizdeTransicao) {
-        this.MatrizdeTransicao = MatrizdeTransicao;
+            this.MatrizdeTransicao = MatrizdeTransicao;
     }    
 }
