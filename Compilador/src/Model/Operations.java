@@ -177,9 +177,15 @@ public class Operations {
     
     //Metódo que define a precendecia de operadores;
     private int PreOp(char op){
-        if(op == '*') return 3; //Maior precendecia
-            else if(op == '.') return 2;   
-                else if(op == '+') return 1;
-                    else return 0; // Menor precendencia
+        switch (op) {
+            case '*':
+                return 3; //Maior precendecia
+            case '.':
+                return 2;
+            case '+':
+                return 1;
+            default:
+                return 0; // Menor precendencia
+        }
     }
 }
