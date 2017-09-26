@@ -14,7 +14,7 @@ import javafx.scene.control.Alert.AlertType;
  * @author luis.oliveira
  */
 public class Operations {
-    private Stack<Character> pilha = new Stack<>();
+    private final Stack<Character> pilha = new Stack<>();
     
     //Metódo converte expressão de infixa para posfixa.
     public String Posfixa(String s){
@@ -83,7 +83,66 @@ public class Operations {
                 alerta.setContentText("Falta fechar parêntese ')'.");
                 alerta.showAndWait(); 
             }
+        pos = ValidaExpressao(pos); // validando a expressao.
         return pos;
+    }
+    
+    public String ValidaExpressao(String s){
+        int i;
+        //Alertta de Erros.
+        Alert alerta = new Alert(AlertType.ERROR);
+        alerta.setTitle("Compilador");
+        alerta.setHeaderText(null);
+        
+            for(i=0; i< s.length(); i++){
+                //Se simbolo for operando
+                if(s.charAt(i)!= '.' && s.charAt(i)!= '+' && s.charAt(i)!= '*'){
+                pilha.push(s.charAt(i));
+                }
+                //Se simbolo for operador
+                else{
+                    //Se operador Binario
+                    if(s.charAt(i)!= '*'){
+                        if(!pilha.empty()){
+                            pilha.pop();
+                            if(!pilha.empty()){
+                                pilha.pop();
+                                pilha.push('x');
+                            }//fim op1
+                            else{
+                                alerta.setContentText(" O operador '"+s.charAt(i)+"' é binário e só foi encontrado um operando.");
+                                alerta.showAndWait();
+                                return null;
+                            }
+                        }//fim op2
+                        else{
+                            alerta.setContentText(" O operador '"+s.charAt(i)+"' é binário e só foi encontrado um operando.");
+                            alerta.showAndWait();
+                            return null;
+                        }
+                    }//fim bin
+                //Se o simbolo e Unario
+                else{
+                     if(!pilha.empty()){
+                         pilha.pop();
+                         pilha.push('s');
+                     }
+                     else{
+                          alerta.setContentText(" O operador '"+s.charAt(i)+"' é unario e não foi encontrado operando.");
+                          alerta.showAndWait();
+                          return null;
+                     }
+                }
+            } //fim operadores
+        }//fim for
+        if(pilha.empty()){
+             alerta.setContentText(" Expressão Regular inválida.");
+             alerta.showAndWait();
+             return null;
+        }
+        else{
+            return s;   
+        }
     }
     
     //Metódo que torna explicito as concatenações da expressão
